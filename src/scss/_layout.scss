@@ -1,0 +1,21 @@
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 90%;
+  margin-left: var(--m-1-5);
+  margin-right: var(--m-1-5);
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 3rem 0;
+}

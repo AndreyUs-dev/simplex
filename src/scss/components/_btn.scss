@@ -1,0 +1,16 @@
+.btn {
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  border: 2px solid var(--white-color);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+
+  &--appform {
+    background-color: var(--second-color);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--second-color-alt);
+    }
+  }
+}

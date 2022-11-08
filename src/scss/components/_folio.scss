@@ -1,0 +1,47 @@
+.folio {
+  &__content {
+    margin-bottom: var(--m-2);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+
+    & i {
+      transition: transform 0.4s;
+      padding-left: 0.2rem;
+    }
+
+    &:hover i {
+      transform: translateX(0.3rem);
+    }
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .folio__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .folio__container {
+    grid-template-columns: 1fr 2fr;
+    gap: 6rem;
+  }
+
+  .folio__content {
+    position: sticky;
+    top: 0;
+    align-self: start;
+  }
+}

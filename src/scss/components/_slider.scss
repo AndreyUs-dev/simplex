@@ -1,0 +1,148 @@
+// SWIPER SLIDES
+
+.swiper {
+  width: 100%;
+}
+
+.slider__next {
+  background-color: var(--second-color);
+  margin-right: 2rem;
+
+  & i {
+    color: var(--text-color);
+    font-size: var(--h2-font-size);
+    color: var(--white-color);
+  }
+
+  &::after {
+    content: none !important;
+  }
+}
+
+.swiper-pagination-fraction {
+  font-size: var(--h2-font-size);
+}
+
+.swiper-pagination-current {
+  color: var(--second-color);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+}
+
+.swiper-pagination-total {
+  color: var(--text-color);
+  font-size: var(--h2-font-size);
+}
+
+// CUSTOM STYLES
+
+.slider {
+  position: relative;
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__imgbox {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--gray-color);
+      z-index: -1;
+    }
+  }
+
+  &__img {
+    width: 90%;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: var(--m-2);
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 3rem;
+      height: 2px;
+      background-color: var(--text-color);
+    }
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 320px) {
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .slider__content {
+    padding-right: var(--m-2);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .slider__slide {
+    flex-direction: row;
+  }
+
+  .slider__imgbox {
+    flex: 1 0 50%;
+    width: 50%;
+    align-self: flex-start;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 300px;
+      top: 0;
+      left: 0;
+      background-color: var(--gray-color);
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .slider__imgbox {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 700px;
+      height: 300px;
+      top: 0;
+      left: 0;
+      background-color: var(--gray-color);
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .slider__imgbox {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 900px;
+      height: 550px;
+      top: 0;
+      left: 0;
+      background-color: var(--gray-color);
+      z-index: -1;
+    }
+  }
+}

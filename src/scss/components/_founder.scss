@@ -1,0 +1,149 @@
+.founder {
+  background-color: var(--first-color);
+  padding: 0;
+  margin-top: var(--m-2);
+  position: relative;
+
+  &__intro {
+    padding: 2rem 0;
+  }
+
+  &__name {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 3rem;
+      height: 2px;
+      background-color: var(--text-color);
+    }
+  }
+
+  &__description {
+    margin: var(--m-2) 0;
+  }
+
+  &__imgbox {
+    position: relative;
+  }
+
+  &__img {
+    margin-inline: auto;
+    display: block;
+    width: 300px;
+  }
+
+  &__intro-lg {
+    display: none;
+  }
+
+  &__founder__title-lg {
+    font-weight: var(--font-bold);
+  }
+
+  &__hidden-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .founder__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .founder__imgbox {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .founder__hidden-text {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .founder__container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+
+  .founder__imgbox {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+  }
+
+  .founder__img {
+    width: 100%;
+    display: initial;
+    margin-top: -3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .founder__imgbox {
+    position: initial;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .founder::after {
+    content: none;
+  }
+
+  .founder__hidden-text {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .founder__container {
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+
+  .founder__name {
+    display: none;
+  }
+
+  .founder__imgbox {
+    width: 600px;
+  }
+
+  .founder__intro-lg {
+    display: initial;
+    position: absolute;
+    top: 4rem;
+    transform: translateX(30rem);
+    max-width: 400px;
+  }
+
+  .founder::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 6rem;
+    bottom: 6rem;
+    display: block;
+    width: 170px;
+    height: 170px;
+    background-image: url('../img/chat-quote-line.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .founder__hidden-text {
+    display: block;
+  }
+}

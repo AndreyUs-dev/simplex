@@ -1,0 +1,30 @@
+@import './variables';
+@import './base';
+@import './layout';
+@import './breakpoints';
+@import './components/btn';
+@import './components/sidebar';
+@import './components/hero';
+@import './components/folio';
+@import './components/card';
+@import './components/founder';
+@import './components/about';
+@import './components/facts';
+@import './components/slider';
+@import './components/follow';
+@import './components/footer';
+
+.page-wrapper {
+}
+
+.main {
+  position: relative;
+  background-color: var(--white-color);
+  z-index: 20;
+}
+
+@media screen and (min-width: 576px) {
+  .main {
+    padding-left: 110px;
+  }
+}

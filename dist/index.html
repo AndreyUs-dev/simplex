@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Simplex clone</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- SIDEBAR  -->
+
+      <aside class="sidebar">
+        <div class="overlay"></div>
+
+        <div class="sidebar__wrapper">
+          <div class="gradient">
+            <div class="gradient gradient--1"></div>
+            <div class="gradient gradient--2"></div>
+            <div class="gradient gradient--3"></div>
+          </div>
+          <div class="sidebar__content">
+            <a href="#" class="sidebar__logo"
+              ><i class="ri-hospital-fill"></i> Simplex</a
+            >
+            <a href="#" class="sidebar__toggler" data-open="false">
+              <i class="ri-menu-line"></i>
+            </a>
+
+            <ul class="sidebar__nav">
+              <li class="sidebar__navitem">
+                <a class="sidebar__navlink" href="#">Главная</a>
+              </li>
+              <li class="sidebar__navitem">
+                <a class="sidebar__navlink" href="#">Услуги и стоимость</a>
+              </li>
+              <li class="sidebar__navitem">
+                <a class="sidebar__navlink" href="#">Наша команда</a>
+              </li>
+              <li class="sidebar__navitem">
+                <a class="sidebar__navlink" href="#">Документы</a>
+              </li>
+
+              <!-- NAV CONTACT  -->
+
+              <div class="contact-top">
+                <div class="contact__box">
+                  <a class="contact__tel" href="tel:+78124480807"
+                    >+7 (812) 448-08-07</a
+                  >
+                </div>
+                <div class="contact__box">
+                  <p class="contact__adress">
+                    г. Санкт-Петербург, Полтавский проезд, 2В
+                  </p>
+                  <a class="contact__location" href="#"
+                    >Как добраться <i class="ri-arrow-right-line"></i
+                  ></a>
+                </div>
+
+                <div class="contact__box">
+                  <p class="contact__payment">Способы оплаты</p>
+                  <img
+                    class="contact__payment-img"
+                    src="./img/pay_new.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN  -->
+      <main class="main">
+        <!-- VIDEO  -->
+
+        <section class="hero">
+          <div class="hero__videobox">
+            <video
+              class="hero__video"
+              preload="./img/video-bkg.jpg"
+              autoplay
+              muted
+              loop
+            >
+              <source src="./video/main-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <a class="hero__folio" href="#">
+            <h1><span>Смотреть</span> истории наших пациентов</h1>
+          </a>
+
+          <div class="hero__logobox">
+            <img class="hero__logo" src="./img/circle-logo.svg" alt="" />
+          </div>
+        </section>
+        <!-- PORTFOLIO  -->
+        <section class="section folio">
+          <!-- <div class="section-name">
+            <h1>Портфолио</h1>
+          </div> -->
+          <div class="folio__container container grid">
+            <!-- col-1  -->
+            <div class="folio__content">
+              <h2 class="folio__title">Истории наших пациентов</h2>
+              <p>
+                Улыбка - это самая мощная форма выражения, выходящая далеко за
+                пределы культурных, социальных или любых других границ. Улыбка
+                всегда соединяет людей, выражая эмоции, чувственность и, прежде
+                всего, выражая человечность.
+              </p>
+              <a href="#" class="folio__link"
+                >Смотреть все истории<i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+            <!-- col-2  -->
+            <div class="folio__cards grid">
+              <article class="card">
+                <a class="card__link" href="#">
+                  <div class="card__imgbox">
+                    <div class="card__img card__img--1"></div>
+                  </div>
+                  <h2 class="card__name">История <span>Екатерины</span></h2>
+                </a>
+              </article>
+              <article class="card">
+                <a class="card__link" href="#">
+                  <div class="card__imgbox">
+                    <div class="card__img card__img--2"></div>
+                  </div>
+                  <h2 class="card__name">История <span>Ольги</span></h2>
+                </a>
+              </article>
+              <article class="card">
+                <a class="card__link" href="#">
+                  <div class="card__imgbox">
+                    <div class="card__img card__img--3"></div>
+                  </div>
+                  <h2 class="card__name">История <span>Елены</span></h2>
+                </a>
+              </article>
+              <article class="card">
+                <a class="card__link" href="#">
+                  <div class="card__imgbox">
+                    <div class="card__img card__img--4"></div>
+                  </div>
+                  <h2 class="card__name">История <span>Марии</span></h2>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOUNDER   -->
+        <section class="section founder">
+          <div class="founder__container container grid">
+            <div class="founder__intro">
+              <h2 class="founder__title">Основатель клиники</h2>
+              <span class="founder__name">Перепеченкова Надежда Петровна</span>
+              <div class="founder__description">
+                <p>
+                  Безграничная любовь к профессии и чувство ответственности
+                  формируют мой собственный стиль работы. Каждый пациент для
+                  меня — повод подумать и индивидуально подойти к решению каждой
+                  ситуации. Я консультирую, лечу, рекомендую пациентам только
+                  то, что порекомендовала бы самой себе.
+                </p>
+                <p class="founder__hidden-text">
+                  Обратившись в клинику «Simplex», Вы можете быть уверены, что
+                  получите качественное и высокопрофессиональное лечение по
+                  доступным ценам. Все, что мы делаем, мы делаем с душой, ведь
+                  для нас наша клиника — это наша страсть!
+                </p>
+              </div>
+              <div class="btn-box">
+                <a href="#" class="btn btn--founder">Смотреть всех врачей</a>
+              </div>
+            </div>
+            <div class="founder__imgbox">
+              <img class="founder__img" src="./img/doc.png" alt="" />
+              <div class="founder__intro-lg">
+                <h2 class="founder__title-lg">
+                  Перепеченкова Надежда Петровна
+                </h2>
+                <span class="founder__name-lg"
+                  >Главный врач, Врач-стоматолог-ортопед-хирург-терапевт</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about">
+          <div class="about__intro container">
+            <h2 class="about__title">
+              Мы думаем о здоровье пациентов, а не о наградах и премиях. Каждый
+              день наша команда использует технологии, которые многие кажутся
+              будущем, что позволяет получить красивую улыбку быстро и с
+              наибольшим комфортом.
+            </h2>
+          </div>
+          <div class="about__container grid">
+            <article class="about__item about__item--1">
+              <p>
+                Клиника «Simplex» открылась в 2014 году, и на сегодняшний день
+                мы оказали квалифицированную стоматологическую помощь тысячам
+                пациентов из самых разных городов и стран.
+              </p>
+              <a href="#" class="about__link"
+                >Подробнее о клинике<i class="ri-arrow-right-line"></i
+              ></a>
+            </article>
+            <article class="about__item about__item--2">
+              <p>
+                Наша работа приносит удовольствие не только нам, но и клиентам.
+                Здесь царит приятная, дружеская обстановка без формальностей,
+                совсем не похожая на неприветливость больничных коридоров.
+              </p>
+              <a href="#" class="about__link"
+                >Подробнее о клинике<i class="ri-arrow-right-line"></i
+              ></a>
+            </article>
+          </div>
+        </section>
+
+        <!-- FACTS  -->
+
+        <section class="facts">
+          <div class="facts__container grid">
+            <div class="facts__item">
+              <h2 id="fact-1" class="facts__num">0</h2>
+              <span class="facts__description">Лет нашему делу</span>
+            </div>
+            <div class="facts__item">
+              <h2 id="fact-2" class="facts__num">0</h2>
+              <span class="facts__description">Опытных врачей</span>
+            </div>
+            <div class="facts__item">
+              <h2 id="fact-3" class="facts__num">0</h2>
+              <span class="facts__description">Счастливых пациентов</span>
+            </div>
+            <div class="facts__item">
+              <h2 id="fact-4" class="facts__num">0</h2>
+              <span class="facts__description">Счастливых пациентов</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDER  -->
+        <section class="slider section">
+          <div class="slider__container container">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slider__slide">
+                  <figure class="slider__imgbox">
+                    <img class="slider__img" src="./img/slide_01.png" alt="" />
+                  </figure>
+                  <div class="slider__content">
+                    <h2 class="slider__title">Лечение под микроскопом</h2>
+                    <p class="slider__description">
+                      В нашей клинике пациентам рекомендуется лечение под
+                      микроскопом.
+                    </p>
+                    <p class="slider__description">
+                      Эту технологию используют все современные клиники, в
+                      которых действительно заботятся о здоровье и комфорте
+                      пациентов. Мы применяем стоматологический микроскоп Leica
+                      с 40-кратным увеличением, чтобы в несколько раз повысить
+                      точность каждой операции и сохранить как можно больше
+                      здоровых тканей зуба
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <figure class="slider__imgbox">
+                    <img class="slider__img" src="./img/slide_02.png" alt="" />
+                  </figure>
+                  <div class="slider__content">
+                    <h2 class="slider__title">Цифровая стоматология</h2>
+                    <p class="slider__description">
+                      Tехнологичный гаджет - cad/cam система Cerec
+                    </p>
+                    <p class="slider__description">
+                      Cистема Cerec состоит из: внутриротового сканера и
+                      фрезерного станка. С его помощью можно очень быстро и
+                      эффективно делать керамические реставрации.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                  <figure class="slider__imgbox">
+                    <img class="slider__img" src="./img/slide_03.png" alt="" />
+                  </figure>
+                  <div class="slider__content">
+                    <h2 class="slider__title">Диагностика</h2>
+                    <p class="slider__description">
+                      Для кого-то применение цифровых технологий в стоматологии
+                      — это будущее, для нас — ежедневная практика.
+                    </p>
+                    <p class="slider__description">
+                      При лечении пациентов в нашей клинике применяются самые
+                      эффективные методы, основанные на последних разработках
+                      науки и техники. Мы используем цифровое моделирование,
+                      компьютерную томографию и сканирование ротовой полости.
+                      Это помогает добиться наиболее быстрого и правильно
+                      прогнозируемого результата.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- pagination and next button -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next slider__next">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOLLOW US  -->
+        <section class="follow section">
+          <div class="container">
+            <h2 class="follow__title">Следите за нами в соцсетях</h2>
+          </div>
+        </section>
+
+        <!-- FOOTER  -->
+      </main>
+      <footer class="footer">
+        <div class="footer__container container grid">
+          <!-- COL-1  -->
+
+          <div class="footer__soc-wrapper">
+            <ul class="soc__list">
+              <li class="soc__item">
+                <a href="#" class="soc__link"
+                  ><i class="ri-youtube-line"></i
+                ></a>
+              </li>
+              <li class="soc__item">
+                <a href="#" class="soc__link">
+                  <i class="ri-instagram-line"></i
+                ></a>
+              </li>
+              <li class="soc__item">
+                <a href="#" class="soc__link">
+                  <i class="ri-facebook-box-line"></i
+                ></a>
+              </li>
+            </ul>
+            <p class="footer__disclaimer">
+              О возможных противопоказаниях проконсультируйтесь с нашими
+              специалистами.
+            </p>
+          </div>
+
+          <!-- COL-2  -->
+
+          <div class="footer__nav-wrapper">
+            <ul class="footer__menu">
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Портфолио</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Услуги и стоимость</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">О нас</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Наша команда</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Документы</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#" class="footer__menu-link">Как нас найти</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- COL-3  -->
+
+          <div class="footer__form-wrapper">
+            <h2 class="footer__title">Записаться на прием</h2>
+            <form action="/" method="post" class="appform">
+              <div class="appform__input-item">
+                <input class="appform__input" type="text" />
+                <label for="" class="appform__label">Имя</label>
+              </div>
+              <div class="appform__input-item">
+                <input class="appform__input" type="tel" />
+                <label for="" class="appform__label">Телефон</label>
+              </div>
+              <div class="appform__input-item">
+                <input class="appform__input" type="text" />
+                <label for="" class="appform__label">Причина обращения</label>
+              </div>
+              <div class="appform__input-item appform__input-item--check">
+                <input
+                  id="appform__check"
+                  class="appform__check"
+                  type="checkbox"
+                />
+                <label
+                  for="appform__check"
+                  class="appform__label appform__label--check"
+                  >Я даю согласие на обработку моих
+                </label>
+              </div>
+              <div class="appform__input-item appform__input-item--btn">
+                <button class="btn btn--appform">Записаться на прием</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- COL-4  -->
+
+          <div class="footer__contact-wrapper contact">
+            <div class="contact__box">
+              <a class="contact__tel" href="tel:+78124480807"
+                >+7 (812) 448-08-07</a
+              >
+            </div>
+            <div class="contact__box">
+              <p class="contact__adress">
+                г. Санкт-Петербург, Полтавский проезд, 2В
+              </p>
+              <a class="contact__location" href="#"
+                >Как добраться <i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+
+            <div class="contact__box">
+              <p class="contact__payment">Способы оплаты</p>
+              <img
+                class="contact__payment-img"
+                src="./img/pay_new.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

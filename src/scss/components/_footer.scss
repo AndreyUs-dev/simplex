@@ -1,0 +1,167 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  padding: var(--m-2) 0 var(--m-2) 130px;
+
+  &__title {
+    margin-bottom: var(--m-1-5);
+  }
+
+  &__container {
+    row-gap: var(--m-2);
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__menu-link {
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--second-color);
+    }
+  }
+}
+
+.soc {
+  &__list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__link {
+    i {
+      color: var(--text-color);
+      font-size: var(--h1-font-size);
+
+      &:hover {
+        color: var(--second-color);
+      }
+    }
+  }
+}
+
+// FORM
+
+.appform {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m-2);
+
+  &__input-item {
+    position: relative;
+
+    &--check {
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+
+    &--btn {
+      border: none;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    padding: var(--m-1);
+    border-bottom: 1px solid var(--text-color);
+
+    &:focus {
+      border-bottom: 1px solid var(--second-color);
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: var(--m-1);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: font-size 0.3s, color 0.3s;
+
+    &--check {
+      margin-left: var(--m-0-5);
+    }
+  }
+}
+
+.appform__input:focus + .appform__label {
+  top: -0.5rem;
+  font-size: var(--smaller-font-size);
+  color: var(--second-color);
+}
+
+// CONTACT
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mb-2);
+
+  &__tel {
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-bold);
+  }
+
+  &__location {
+    color: var(--text-color);
+    font-size: var(--h3-font-size);
+    display: flex;
+    font-weight: var(--font-bold);
+
+    i {
+      margin-left: var(--m-0-5);
+      transition: transform 0.4s;
+    }
+
+    &:hover {
+      i {
+        transform: translateX(0.5rem);
+      }
+    }
+  }
+
+  &__payment-img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 767px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr 2fr 2fr;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+}

@@ -1,0 +1,262 @@
+.sidebar {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+
+  &__content {
+    display: flex;
+    height: var(--header-height);
+    background: var(--gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    color: var(--text-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    padding-left: var(--m-1);
+  }
+
+  &__toggler {
+    position: static;
+    color: var(--black-color);
+    font-size: var(--h1-font-size);
+    padding-right: var(--m-1);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    width: 100%;
+    background-color: var(--white-color);
+    flex-direction: column;
+    top: var(--header-height);
+    padding: var(--m-2);
+    z-index: -1;
+    transform: translateY(-200%);
+    transition: transform 0.5s;
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
+
+  &__navlink {
+    color: var(--text-color);
+    font-weight: var(--font-bold);
+    font-size: var(--h2-font-size);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 576px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 110px;
+    z-index: 100;
+  }
+
+  .sidebar__wrapper {
+    height: 100%;
+    display: flex;
+  }
+
+  .sidebar__content {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .sidebar__logo {
+    order: 2;
+    transform: rotate(-90deg);
+  }
+
+  .sidebar__toggler {
+    position: absolute;
+    top: 2rem;
+  }
+
+  .sidebar__nav {
+    height: 100vh;
+    margin: 0 0 0 110px;
+    top: 0;
+    left: 0;
+    width: 35vw;
+    align-items: flex-start;
+    padding: var(--m-3);
+    transform: translateX(-200%);
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  .sidebar__navitem {
+    display: flex;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 0;
+      height: 3px;
+      background-color: var(--second-color);
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      &::before {
+        width: 2rem;
+      }
+    }
+  }
+
+  .sidebar__navlink {
+    transition: color 0.3s;
+
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--second-color);
+      transform: translateX(3rem);
+    }
+  }
+
+  .overlay.show {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+
+.gradient {
+  display: flex;
+  min-height: 14px;
+  width: 100%;
+  flex-direction: row;
+  height: 100%;
+
+  &--1 {
+    background-color: var(--first-color);
+    flex: 0 0 12%;
+  }
+
+  &--2 {
+    background-color: var(--second-color);
+    flex: 0 0 30%;
+  }
+
+  &--3 {
+    background-color: var(--text-color);
+    flex: 1 1 auto;
+  }
+}
+
+// CONTACT
+
+.contact-top {
+  display: none;
+  flex-direction: column;
+  gap: var(--mb-2);
+
+  &--top {
+    display: none;
+  }
+
+  &__tel {
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-bold);
+  }
+
+  &__adress {
+    // font-size: var(--h3-font-size);
+  }
+
+  &__location {
+    color: var(--text-color);
+    font-size: var(--h3-font-size);
+    display: flex;
+    font-weight: var(--font-bold);
+
+    i {
+      margin-left: var(--m-0-5);
+      transition: transform 0.4s;
+    }
+
+    &:hover {
+      i {
+        transform: translateX(0.5rem);
+      }
+    }
+  }
+
+  &__payment {
+    // font-size: var(--h3-font-size);
+  }
+
+  &__payment-img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .sidebar__nav {
+    width: 45vw;
+  }
+
+  .gradient {
+    height: 100%;
+    width: 14px;
+    flex: 14px 0 0;
+    flex-direction: column;
+
+    &--1 {
+      background-color: var(--first-color);
+      flex: 0 0 12%;
+    }
+
+    &--2 {
+      background-color: var(--second-color);
+      flex: 0 0 30%;
+    }
+
+    &--3 {
+      background-color: var(--text-color);
+      flex: 1 1 auto;
+    }
+  }
+
+  .contact-top {
+    display: flex;
+    margin-top: var(--m-2);
+  }
+}
